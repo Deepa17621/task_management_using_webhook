@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Module</title>
+  <script src="https://live.zwidgets.com/js-sdk/1.2/ZohoEmbededAppSDK.min.js"></script>
+  <link rel="stylesheet" href="widget.css">
+</head>
+<body>
+   <!-- list-wrapper -->
+   <div class="task-list-wrapper">
+    <header class="list-page-header">
+      <button class="create-task-btn">Create task</button>
+    </header>
+    <sectoin class="list-wrapper">
+        <table>
+          <thead class="tbl-header-list"></thead>
+          <tbody class="tbl-body-list"></tbody>
+        </table>
+    </sectoin>
+  </div>
+
+  <!-- display-wrapper -->
+  <div class="detailed-view-wrapper">
+    <header class="task-display-header">
+      <ul>
+          <li class="update-task-btn">Update task</li>
+          <li class="delete-task-btn">Delete task</li>
+          <li class="backBtn">back to home</li>
+          <li class="timeline-btn">TimeLine</li>
+      </ul>
+  </header>
+  <main class="display-wrapper">
+      <table class="display-tbl"></table>
+  </main>
+  </div>
+
+  <!-- Form-wrapper -->
+  <div class="task-create-form-wrapper">
+    <div class="form-container">
+      <h2>task Form</h2>
+      <form id="taskForm">
+          <div class="form-group">
+              <label for="taskOwner">Task Owner</label>
+              <select name="taskOwner" id="taskOwner"></select>
+              <span class="error">Task Owner is required</span>
+          </div>
+
+          <div class="form-group">
+              <label for="subject">Suject</label>
+              <input type="text" id="subject">
+              <span class="error">Suject is required</span>
+          </div>
+
+          <div class="form-group">
+            <label for="dueDate">Due Date</label>
+            <input type="date" id="dueDate">
+            <span class="error">Date is required</span>
+          </div>
+
+          <div class="for-groups">
+            <label for="contacts">Contact</label>
+            <select name="contacts" id="contacts"></select>
+            <span class="error"></span>
+          </div>
+
+          <div class="for-groups">
+            <label for="accounts">Accountt</label>
+            <select name="accounts" id="accounts"></select>
+            <span class="error"></span>
+          </div>
+
+          <div class="form-group">
+              <label for="priority">priority</label>
+              <select name="priority" id="priority">
+                <option value="" disabled selected>Select priority</option>
+                <option value="High">High</option>
+                <option value="Highest">Highest</option>
+                <option value="Low">Low</option>
+                <option value="Lowest">Lowest</option>
+                <option value="Normal">Normal</option>
+              </select>
+              <span class="error">priority is required</span>
+          </div>
+
+          <div class="form-groups">
+            <label for="status">Status</label>
+            <select name="status" id="status">
+              <option value="" disabled selected>Select status</option>
+              <option value="Not Started">Not Started</option>
+              <option value="In Progress">In Progress</option>
+              <option value="Completed">Completed</option>
+              <option value="Deffered">Deffered</option>
+              <option value="Waiting For Input">Waiting For Input</option>
+            </select>
+            <span class="error"></span>
+          </div>
+          <button type="submit">Submit</button>
+      </form>
+  </div>
+  </div>
+
+  <!-- Time Line - Track Task -->
+   <div class="timeline-wrapper">
+
+   </div>
+  <script src="widget.js" type="module"></script>
+</body>
+</html>

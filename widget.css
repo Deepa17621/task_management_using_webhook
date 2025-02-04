@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "Open Sans",sans-serif;
+    background-color: #f1f4f7;
+    height: 100vh;
+    width: 100vw;
+    font-size: small;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* Lead List Style */
+.task-list-wrapper{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+}
+.list-page-header{
+    margin: 1rem auto;
+    width: 95%;
+    height: 4rem;
+    background-color: rgb(194, 186, 194);
+    color: white;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.create-task-btn{
+    width: 10rem;
+    border: none;
+    padding: 0.7rem;
+    background-color: rgba(30, 0, 255, 0.358);
+    color: white;
+    border-radius: 0.2rem;
+    margin-right: 2rem;
+    transition: background-color 0.5s ease-in-out;
+    &:hover{
+        background-color: rgba(30, 0, 255, 0.555);
+    }
+}
+.list-wrapper{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.list-wrapper table{
+    height: 95%;
+    width: 95%;
+    padding: 1rem;
+    border-radius: 0.2rem;
+}
+.list-wrapper table, .list-wrapper tr,.list-wrapper th{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px 5px;
+    /* width: 95%; */
+}
+.tbl-header-list{
+    background-color: rgba(128, 128, 128, 0.447);
+}
+.tbl-body-list{
+    transition: background-color 0.6s ease-in-out;
+}
+.tbl-body-list>tr:hover{
+    cursor: pointer;
+    background-color: rgba(128, 128, 128, 0.247);
+}
+
+/* Lead Display Style */
+.detailed-view-wrapper{
+    height: 100%;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+}
+.task-display-header{
+    background-color: grey;
+    padding: 0.3rem;
+    display: flex;
+    position: relative;
+    top: 0;
+    width: 100%;
+    margin-bottom:2rem ;
+    justify-content: center;
+}
+ul{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: right;
+}
+li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+    transition: background-color 0.5s ease-in-out;
+    &:hover{
+        cursor: pointer;
+        background-color: blueviolet;
+    }
+}
+.display-wrapper{
+    display: flex;
+    justify-content: center;
+    overflow-y: auto;
+}
+.display-tbl{
+    border: none;
+    width: 80%;
+}
+.display-tbl td{
+    text-align: left;
+    padding: 0.7rem;
+    width: 1.5rem;
+}
+
+/* create Lead Form Style */
+.task-create-form-wrapper{
+    height: 100%;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form-container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+input , select{
+    width: 90%;
+    padding: 8px 2px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+.error {
+    color: red;
+    font-size: 12px;
+    display: none;
+    margin-top: 5px;
+}
+
+/* Lookup Dropdown */
+.lookup-container {
+    position: relative;
+}
+.lookup-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: none;
+    z-index: 10;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.lookup-item {
+    padding: 8px;
+    cursor: pointer;
+}
+.lookup-item:hover {
+    background: #f0f0f0;
+}
+
+/* Button */
+button {
+    width: 100%;
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+button:hover {
+    background: #0056b3;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+    }
+}
